@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, CircleHelp, ArrowUp } from "lucide-react";
 import { socials, navLinks } from "@/lib/site";
 
-export const Logo = () => (<Link href="/" aria-label="PAADC home"><Image src="/images/logo.png" alt="Prof. Ayodele Awojobi Design Competition" width={190} height={50} priority /></Link>);
+export const Logo = () => (<Link href="/" aria-label="PAADC home"><Image src="/images/logo-1.png" alt="Prof. Ayodele Awojobi Design Competition" width={190} height={50} priority /></Link>);
 
 export const Socials = ({ className = "", size = 20 }: { className?: string; size?: number }) => (
     <ul className={`flex gap-4 text-ink/50 ${className}`}>
@@ -72,7 +72,7 @@ export function Footer() {
     return (
         <footer id="footer" className="bg-mist">
             <div className="grid md:grid-cols-4 md:divide-x md:divide-brand/10">
-                <div className="flex justify-center py-10"><Image src="/images/mark.png" alt="" width={56} height={64} /></div>
+                <div className="flex justify-center py-10"><Image src="/images/mark.png" alt="" width={100} height={64} /></div>
                 <div className="px-8 py-10"><h3 className={h}>QUICK NAVIGATION</h3>
                     <div className={col}><Link href="/">Home</Link>{navLinks.map(l => <Link key={l.href} href={l.href}>{l.label}</Link>)}</div></div>
                 <div className="px-8 py-10"><h3 className={h}>QUICK LINKS</h3>
