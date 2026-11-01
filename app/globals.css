@@ -1,26 +1,28 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand: #507134;
+  --color-ink: #2e2e2e;
+  --color-sun: #f5e58a;
+  --color-mist: #f5f6f3;
+  --font-sans: var(--font-raleway), sans-serif;
+  --shadow-soft: 0 10px 30px rgba(80, 113, 52, 0.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-ink antialiased; }
+  :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer components {
+  .h-display { @apply font-black tracking-tighter text-brand leading-[0.95]; }
+  .btn-solid { @apply bg-brand px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand/90; }
+  .btn-outline { @apply border border-ink/70 px-5 py-3 text-sm font-medium text-ink transition hover:bg-brand hover:text-white; }
+  .glow { background: radial-gradient(60% 60% at 40% 50%, rgba(245, 229, 138, 0.35), transparent 70%); }
+  .section { @apply relative min-h-screen px-6 pb-28 pt-32 md:px-[9vw]; }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
