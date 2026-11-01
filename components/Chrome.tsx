@@ -72,7 +72,7 @@ export function Footer() {
     return (
         <footer id="footer" className="bg-mist">
             <div className="grid md:grid-cols-4 md:divide-x md:divide-brand/10">
-                <div className="flex justify-center py-10"><Image src="/images/mark.svg" alt="" width={56} height={64} /></div>
+                <div className="flex justify-center py-10"><Image src="/images/mark.png" alt="" width={56} height={64} /></div>
                 <div className="px-8 py-10"><h3 className={h}>QUICK NAVIGATION</h3>
                     <div className={col}><Link href="/">Home</Link>{navLinks.map(l => <Link key={l.href} href={l.href}>{l.label}</Link>)}</div></div>
                 <div className="px-8 py-10"><h3 className={h}>QUICK LINKS</h3>
